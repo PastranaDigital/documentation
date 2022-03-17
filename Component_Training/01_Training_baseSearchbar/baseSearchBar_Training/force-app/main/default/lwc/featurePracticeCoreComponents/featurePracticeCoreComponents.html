@@ -1,0 +1,11 @@
+<template>
+    <!-- <c-frame-hdr settings={settings}> -->
+        
+       <template for:each={data} for:item="item">
+           <div key={item.id}>
+               {item.id} - {item.name}
+           </div>
+       </template>
+
+    <!-- </c-frame-hdr> -->
+</template>
