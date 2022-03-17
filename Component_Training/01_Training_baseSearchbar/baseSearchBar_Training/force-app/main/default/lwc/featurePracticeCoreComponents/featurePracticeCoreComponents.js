@@ -3,6 +3,7 @@ import { tutorialHelper } from 'c/utils';
 
 export default class FeaturePracticeCoreComponents extends LightningElement {
     data = tutorialHelper.dummyData;
+    displayData;
 
     settings = {
         title: 'Bookshelf',
@@ -15,6 +16,7 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
         this.data.forEach(element => {
             element.stars = this.addStars(element.rating);
         });
+        this.displayData = this.data;
     }
 
     //⭐️
@@ -25,5 +27,9 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
         }
 
         return string;
+    }
+
+    handleSearch (event) {
+        this.displayData = event.detail;
     }
 }
