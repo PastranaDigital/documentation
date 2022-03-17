@@ -1,17 +1,13 @@
 <template>
-    <lightning-card>
-        <div class="wrapper">
-
-            <template for:each={data} for:item="item">
-                <div class="content-wrapper" key={item.id}>
-                    <div class="content-title">{item.title}</div>
-                    <div class="content-author">By: {item.author}</div>
-                    <div if:true={item.series} class="content-series">Series: {item.series}</div>
-                    <div class="content-genre">{item.genre}</div>
-                    <div class="content-rating">{item.stars}</div>
-                </div>
-            </template>
-
-        </div>
-    </lightning-card>
+    <c-frame-tutorial settings={settings}>   
+        <template for:each={data} for:item="item">
+            <div class="content-wrapper" key={item.id}>
+                <div class="content-title">{item.title}</div>
+                <div class="content-author">By: {item.author}</div>
+                <div if:true={item.series} class="content-series">Series: {item.series}</div>
+                <div class="content-genre">{item.genre}</div>
+                <div class="content-rating">{item.stars}</div>
+            </div>
+        </template>
+    </c-frame-tutorial>
 </template>

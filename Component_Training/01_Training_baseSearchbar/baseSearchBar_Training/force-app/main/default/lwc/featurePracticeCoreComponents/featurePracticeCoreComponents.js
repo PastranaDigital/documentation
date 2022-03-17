@@ -5,8 +5,8 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
     data = tutorialHelper.dummyData;
 
     settings = {
-        title: 'Component Title',
-        icon: 'standard:account'
+        title: 'Bookshelf',
+        icon: 'standard:article'
     };
 
     connectedCallback () {
