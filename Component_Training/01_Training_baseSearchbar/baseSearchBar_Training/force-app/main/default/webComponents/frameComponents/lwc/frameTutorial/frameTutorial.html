@@ -2,24 +2,9 @@
     <lightning-card title={settings.title} icon-name={settings.icon}>
         <div class='container'>
             <section class='inputs'>
-                <!-- TODO: Search Component  -->
                 <div class='searchbar'>
                     <slot name='searchbar'></slot>
                 </div>
-                <div class='daterange'>
-                    <slot name='daterange'></slot>
-                </div>
-            </section>
-            <section class='sort-info'>
-                <!-- sort-info-component -->
-            </section>
-            <section class='table'>
-                <!-- takes in a datatable -->
-                <slot name='datatable'></slot>
-            </section>
-            <section class='pagination'>
-                <!-- pagination component -->
-                <slot name='pagination'></slot>
             </section>
             <!-- un-named slot for default markup -->
             <slot></slot>
