@@ -1,4 +1,7 @@
 # baseSearchBar Mini-Hackathon
+[Component Documentation](Components.md)
+
+<br>
 
 ## _Objectives_
 - Understand the Component Structure
@@ -16,3 +19,4 @@
 1. Search only two properties of the given `dummyData`
 1. Handle "No Results" when searching
 1. Use `dummyData2` instead
+

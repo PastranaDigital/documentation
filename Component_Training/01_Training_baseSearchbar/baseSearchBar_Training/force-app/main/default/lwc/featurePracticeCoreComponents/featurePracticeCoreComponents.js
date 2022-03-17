@@ -1,14 +1,29 @@
 import { LightningElement } from 'lwc';
-
 import { tutorialHelper } from 'c/utils';
 
 export default class FeaturePracticeCoreComponents extends LightningElement {
     data = tutorialHelper.dummyData;
 
     settings = {
-        title: 'Users HDR Component',
+        title: 'Component Title',
         icon: 'standard:account'
     };
 
-    isEmpty = true;
+    connectedCallback () {
+        if(!this.data) return;
+        
+        this.data.forEach(element => {
+            element.stars = this.addStars(element.rating);
+        });
+    }
+
+    //⭐️
+    addStars (number) {
+        let string = '';
+        for (let i = 0; i < number; i++) {
+            string += '⭐️';
+        }
+
+        return string;
+    }
 }

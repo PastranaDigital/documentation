@@ -1,11 +1,17 @@
 <template>
-    <!-- <c-frame-hdr settings={settings}> -->
-        
-       <template for:each={data} for:item="item">
-           <div key={item.id}>
-               {item.id} - {item.name}
-           </div>
-       </template>
+    <lightning-card>
+        <div class="wrapper">
 
-    <!-- </c-frame-hdr> -->
+            <template for:each={data} for:item="item">
+                <div class="content-wrapper" key={item.id}>
+                    <div class="content-title">{item.title}</div>
+                    <div class="content-author">By: {item.author}</div>
+                    <div if:true={item.series} class="content-series">Series: {item.series}</div>
+                    <div class="content-genre">{item.genre}</div>
+                    <div class="content-rating">{item.stars}</div>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
 </template>
