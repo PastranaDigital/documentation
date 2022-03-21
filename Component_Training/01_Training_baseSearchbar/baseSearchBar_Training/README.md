@@ -15,7 +15,6 @@
 ## _Challenges_
 1. Use the frame component & set the icon = `standard:article` and title = `Bookshelf`
 1. Search the given `dummyData`
-1. Search only the `title` & `author` properties of the data
 1. Handle "No Results" empty state, when searching
+1. Search only the `title` & `author` properties of the data
 1. Use `dummyData2` instead
-
