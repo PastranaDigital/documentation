@@ -96,7 +96,7 @@ Based on the input, the flattened data (array with depth of 1 level) is filtered
 <br>
 
 `onfilterlistbysearch={handleSearch}` 
-- returns in event.detail
+- returns results in `event.detail`
 
 <br>
 
@@ -110,10 +110,7 @@ Based on the input, the flattened data (array with depth of 1 level) is filtered
 - (optional) specified fields in data to search thru
 - example: 
 ```js
-props = {
-    prop1 : 'title', 
-    prop2 : 'author',
-};
+props = ['title', 'author'];
 ```
 
 <br>
