@@ -83,6 +83,8 @@ settings = {
 
 ## _Detailed Base Documentation_
 
+### Base Search Bar
+
 Based on the input, the flattened data (array with depth of 1 level) is filtered and returned to a custom event
 
 ```html
@@ -117,3 +119,39 @@ props = ['title', 'author'];
 
 `slot='searchbar'`
 - slot on frame component for styling & positioning
+
+<br><br>
+
+### Base Empty State 
+
+```html
+<c-base-empty-state
+    type="treasure" 
+    msg={labels.noResultsMessage} 
+    sub-msg={labels.noResultsSubMessage}
+></c-base-empty-state>
+```
+
+<br>
+
+`type="treasure"` 
+
+Empty State Illustration Options
+- axe
+- balloon / noConnection
+- desert
+- fish
+- rain
+- stopsign
+- treasure / noresults
+- if left empty, a default state will be shown
+
+<br>
+
+`msg={labels.noResultsMessage}`
+- can handle a string or variable
+
+<br>
+
+`sub-msg={labels.noResultsSubMessage}`
+- can handle a string or variable
