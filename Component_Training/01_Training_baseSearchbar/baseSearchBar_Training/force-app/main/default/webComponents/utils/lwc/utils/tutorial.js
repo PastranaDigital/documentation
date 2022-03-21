@@ -34,7 +34,7 @@ export const dummyData = [
     {
         id: 5,
         title: 'Red Rising',
-        author: 'Pierce brown',
+        author: 'Pierce Brown',
         series: 'Red Rising, Book 1',
         rating: 5,
         genre: 'Science Fiction',
@@ -165,7 +165,7 @@ export const dummyData2 = [
     {
         id: 5,
         title: 'Red Rising',
-        author: 'Pierce brown',
+        author: 'Pierce Brown',
         series: 'Red Rising, Book 1',
         rating: 5,
         genre: 'Science Fiction',
