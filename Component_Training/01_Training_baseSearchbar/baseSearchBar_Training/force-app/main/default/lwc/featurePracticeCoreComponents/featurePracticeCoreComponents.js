@@ -4,6 +4,7 @@ import { tutorialHelper } from 'c/utils';
 export default class FeaturePracticeCoreComponents extends LightningElement {
     data = tutorialHelper.dummyData;
     displayData;
+    noResults;
 
     settings = {
         title: 'Bookshelf',
@@ -31,5 +32,6 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
 
     handleSearch (event) {
         this.displayData = event.detail;
+        this.displayData.length > 0 ? this.noResults = false : this.noResults = true; 
     }
 }

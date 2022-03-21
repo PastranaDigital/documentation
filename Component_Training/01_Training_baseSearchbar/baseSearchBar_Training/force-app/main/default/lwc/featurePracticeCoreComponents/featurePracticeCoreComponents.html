@@ -4,15 +4,24 @@
             onfilterlistbysearch={handleSearch}
             list={data}
             slot="searchbar"
-        ></c-base-search-bar>   
-        <template for:each={displayData} for:item="item">
-            <div class="content-wrapper" key={item.id}>
-                <div class="content-title">{item.title}</div>
-                <div class="content-author">By: {item.author}</div>
-                <div if:true={item.series} class="content-series">Series: {item.series}</div>
-                <div class="content-genre">{item.genre}</div>
-                <div class="content-rating">{item.stars}</div>
-            </div>
+        ></c-base-search-bar>
+        <template if:false={noResults}>
+            <template for:each={displayData} for:item="item">
+                <div class="content-wrapper" key={item.id}>
+                    <div class="content-title">{item.title}</div>
+                    <div class="content-author">By: {item.author}</div>
+                    <div if:true={item.series} class="content-series">Series: {item.series}</div>
+                    <div class="content-genre">{item.genre}</div>
+                    <div class="content-rating">{item.stars}</div>
+                </div>
+            </template>
+        </template>
+        <template if:true={noResults}>
+            <c-base-empty-state
+                type="treasure" 
+                msg="No Results Found" 
+                sub-msg="Refine your search and try again."
+            ></c-base-empty-state>
         </template>
     </c-frame-tutorial>
 </template>
