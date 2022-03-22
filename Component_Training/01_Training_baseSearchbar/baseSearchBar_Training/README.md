@@ -17,4 +17,5 @@
 1. Search the given `dummyData`
 1. Handle "No Results" empty state, when searching
 1. Search only the `title` & `author` properties of the data
-1. Use `dummyData2` instead
+1. *BONUS:* Use `dummyData2` instead and search for items with a 'digital' format only
+    - should only show 6 results
