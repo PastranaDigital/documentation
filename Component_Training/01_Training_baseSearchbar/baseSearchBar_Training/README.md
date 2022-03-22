@@ -1,4 +1,4 @@
-<img src=".\images\Mini-Hackathon_baseSearchBar.png" alt="baseSearchBar Banner">
+<img src="https://github.com/PastranaDigital/documentation/blob/main/images/Mini-Hackathon_baseSearchBar.png" alt="baseSearchBar Banner">
 
 # baseSearchBar Mini-Hackathon
 [Component Documentation](Components.md)
