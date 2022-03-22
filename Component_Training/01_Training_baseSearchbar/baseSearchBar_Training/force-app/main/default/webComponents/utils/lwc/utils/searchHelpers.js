@@ -1,3 +1,5 @@
+/* eslint-disable no-else-return */
+/* eslint-disable consistent-return */
 // makes all characteres lowercase, and strips whitespace from a string
 
 export const formatStringForSearch = (string) => {
@@ -7,22 +9,25 @@ export const formatStringForSearch = (string) => {
 }
 
 export const flatSearch = (list, searchString, propsToSearch) => {
+    console.log(propsToSearch?.length > 0);
     try {
         if (propsToSearch?.length) {
             return list.filter(listEntry => {
+                // iterate through properties of object
                 for (const [key, value] of Object.entries(listEntry)) {
-                    if (!propsToSearch.includes(key)) continue
-                    return formatStringForSearch(value).includes(formatStringForSearch(searchString));
+                    if (propsToSearch.includes(key) && formatStringForSearch(value).includes(formatStringForSearch(searchString))) {
+                        return true ;
+                    } 
                 } 
             })
-        } else {
-            return list.map(entry => {
-               for (const val of Object.values(entry)) {
-                   if (!formatStringForSearch(val).includes(formatStringForSearch(searchString))) continue;
-                   return entry; 
-               }
-            }).filter(e => e != null); // filtering out null values
-        }
+        } 
+        return list.map(entry => {
+            for (const val of Object.values(entry)) {
+                if (!formatStringForSearch(val).includes(formatStringForSearch(searchString))) continue;
+                return entry; 
+            }
+        }).filter(e => e != null); // filtering out null values
+        
     } catch (error) {
         console.error(error);
     }
