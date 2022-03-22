@@ -2,7 +2,7 @@ import { LightningElement } from 'lwc';
 import { tutorialHelper } from 'c/utils';
 
 export default class FeaturePracticeCoreComponents extends LightningElement {
-    data = tutorialHelper.dummyData;
+    data = tutorialHelper.dummyData2;
     displayData;
     noResults;
 
@@ -19,7 +19,29 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
         this.data.forEach(element => {
             element.stars = this.addStars(element.rating);
         });
-        this.displayData = this.data;
+        console.log('this.displayData: ', this.displayData);
+        this.displayData = this.flattenMyCustomDataObject(this.data);
+        console.log('this.displayData: ', this.displayData);
+    }
+
+    flattenMyCustomDataObject (arrayOfObjects) {
+        let flattened = [];    
+        arrayOfObjects.forEach((obj) => {
+            let prop1;
+            let prop2;
+            obj.platforms.forEach((el, index) => {
+                prop1 = `platformSite${index+1}`;
+            console.log(prop1);
+                obj[prop1] = el.site;
+                prop2 = `platformFormat${index+1}`;
+            console.log(prop2);
+                obj[prop2] = el.format;
+            });
+            console.log(obj);
+            flattened.push(obj);
+        });
+        
+        return flattened;
     }
 
     //⭐️
