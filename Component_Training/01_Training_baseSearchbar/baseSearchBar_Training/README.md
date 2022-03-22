@@ -1,3 +1,5 @@
+<img src=".\images\Mini-Hackathon_baseSearchBar.png" alt="baseSearchBar Banner">
+
 # baseSearchBar Mini-Hackathon
 [Component Documentation](Components.md)
 

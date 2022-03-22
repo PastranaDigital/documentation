@@ -103,8 +103,8 @@ Based on the input, the flattened data (array with depth of 1 level) is filtered
 <br>
 
 `list={data}`
-- a flattened data array 
-- if needing to flatten, use `flattenObject` from `utils -> jsObjectHelpers.js`
+- a flattened data array (no nested properties)
+- if needing to flatten, create a js function specific to your data structure
 
 <br>
 
@@ -136,7 +136,7 @@ props = ['title', 'author'];
 
 `type="treasure"` 
 
-Empty State Illustration Options
+Empty State Illustration Options, taken from: https://www.lightningdesignsystem.com/components/illustration/
 - axe
 - balloon / noConnection
 - desert
@@ -155,3 +155,14 @@ Empty State Illustration Options
 
 `sub-msg={labels.noResultsSubMessage}`
 - can handle a string or variable
+
+<br><br>
+
+example labels object
+
+```js
+labels = {
+    noResultsMessage : 'No Results Found',
+    noResultsSubMessage : 'Refine your search and try again'
+}
+```
