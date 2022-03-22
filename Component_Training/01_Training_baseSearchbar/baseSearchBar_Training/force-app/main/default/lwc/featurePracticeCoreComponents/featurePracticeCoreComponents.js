@@ -6,6 +6,8 @@ export default class FeaturePracticeCoreComponents extends LightningElement {
     displayData;
     noResults;
 
+    props = ['title', 'author'];
+
     settings = {
         title: 'Bookshelf',
         icon: 'standard:article'

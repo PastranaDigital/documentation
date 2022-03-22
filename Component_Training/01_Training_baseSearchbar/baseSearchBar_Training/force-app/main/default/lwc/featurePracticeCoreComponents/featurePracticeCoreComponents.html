@@ -4,6 +4,7 @@
             onfilterlistbysearch={handleSearch}
             list={data}
             slot="searchbar"
+            props-to-search={props}
         ></c-base-search-bar>
         <template if:false={noResults}>
             <template for:each={displayData} for:item="item">
