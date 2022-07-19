@@ -19,7 +19,7 @@ As a developer I need to make sure that my work can be used by as many users as 
 ### 🏫 Salesforce LWC Component Library
 
 -   https://developer.salesforce.com/docs/component-library/overview/components
--   ☝🏽 Go to place for omplete components that have built-in accessibility
+-   ☝🏽 Go to place for complete components that have built-in accessibility
 
 ### 🌩 Lightning Design System
 
